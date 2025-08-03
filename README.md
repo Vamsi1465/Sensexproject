@@ -32,18 +32,18 @@ it will show all the details
 Then integrate it into Power BI dashboard
 Configure Python in Power BI:
 
-Open Power BI Desktop → File → Options and settings → Options → Python scripting
+                       Open Power BI Desktop → File → Options and settings → Options → Python scripting
 
-Set the path to your Python installation directory (the folder containing python.exe).
+                        Set the path to your Python installation directory (the folder containing python.exe).
 
 Update Python script in Power BI data source:
 
 Use a script like this to load data from DuckDB:
-import duckdb
-conn = duckdb.connect("C:/Users/vamsi/OneDrive/Desktop/New folder/sensex_project/data/sensex_data.duckdb", read_only=True)
-df = conn.execute("SELECT * FROM sensex_company_list").fetchdf()
-conn.close()
-df
+                                     import duckdb
+                                      conn = duckdb.connect("C:/Users/vamsi/OneDrive/Desktop/New folder/sensex_project/data/sensex_data.duckdb", read_only=True)
+                                      df = conn.execute("SELECT * FROM sensex_company_list").fetchdf()
+                                       conn.close()
+                                          df
 
 Refresh the report to load the latest data from DuckDB.
 
